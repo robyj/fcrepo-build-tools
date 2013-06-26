@@ -8,7 +8,7 @@
   </parent>
   <groupId>org.fcrepo</groupId>
   <artifactId>fcrepo-build-tools</artifactId>
-  <version>1.0</version>
+  <version>1.0-SNAPSHOT</version>
   <packaging>bundle</packaging>
   <name>fcrepo-build-tools</name>
   <description>A package that contains build tools such as checkstyle rules for org.fcrepo projects</description>
@@ -100,4 +100,70 @@
       </plugin>
     </plugins>
   </build>
+
+  <scm>
+    <connection>scm:git:git://github.com/futures/fcrepo-build-tools.git
+    </connection>
+    <developerConnection>scm:git:git@github.com:futures/fcrepo-build-tools.git
+    </developerConnection>
+    <url>https://github.com/futures/fcrepo-build-tools</url>
+  </scm>
+
+  <prerequisites>
+    <maven>3.0.0</maven>
+  </prerequisites>
+
+  <profiles>
+    <profile>
+      <id>release-sign-artifacts</id>
+      <activation>
+        <property>
+          <name>performRelease</name>
+          <value>true</value>
+        </property>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>1.4</version>
+            <executions>
+              <execution>
+                <id>sign-artifacts</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+            <configuration>
+              <useAgent>true</useAgent>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+      <comments>Copyright (c) 2013 DuraSpace</comments>
+    </license>
+  </licenses>
+  
+  <developers>
+    <developer>
+      <id>eddies</id>
+      <name>Edwin Shin</name>
+      <email>edwin.shin @ (domain of organization url)</email>
+      <organization>MediaShelf</organization>
+      <organizationUrl>http://www.yourmediashelf.com/</organizationUrl>
+      <roles>
+        <role>developer</role>
+      </roles>
+      <timezone>+8</timezone>
+    </developer>
+  </developers>
 </project>
