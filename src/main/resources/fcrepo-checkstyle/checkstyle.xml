@@ -47,7 +47,7 @@
     <module name="AvoidStarImport"/>
     <!-- Checks for long lines. -->
     <module name="LineLength">
-      <property name="severity" value="warning"/>
+      <property name="max" value="120"/>
     </module>
     <!-- Write Javadocs for public methods and classes. Keep it short and to the point
 				/**
