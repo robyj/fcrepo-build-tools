@@ -1,0 +1,24 @@
+language: java
+
+jdk:
+  - openjdk7
+
+branches:
+  only:
+    - master
+
+script:
+  - xmllint --valid --noout src/main/resources/fcrepo-checkstyle/checkstyle.xml
+  - xmllint --valid --noout src/main/resources/fcrepo-checkstyle/checkstyle-suppressions.xml
+  - mvn install
+  - unzip -d target/zipout target/fcrepo-build-tools-*.jar
+  - test "0" == $([ -f target/zipout/fcrepo-checkstyle/checkstyle.xml ] && echo "0" || echo "1")
+  - test "0" == $([ -f target/zipout/fcrepo-checkstyle/checkstyle-suppressions.xml ] && echo "0" || echo "1")
+  - test "0" == $([ -f target/zipout/fcrepo-license/LICENSE_HEADER.txt ] && echo "0" || echo "1")
+
+notifications:
+  irc:
+    channels:
+      - irc.freenode.org#duraspace-ff
+    on_failure: always
+    on_success: always
