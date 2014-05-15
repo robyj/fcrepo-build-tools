@@ -101,11 +101,11 @@
   </build>
 
   <scm>
-    <connection>scm:git:git://github.com/futures/fcrepo-build-tools.git
+    <connection>scm:git:git://github.com/fcrepo4/fcrepo-build-tools.git
     </connection>
-    <developerConnection>scm:git:git@github.com:futures/fcrepo-build-tools.git
+    <developerConnection>scm:git:git@github.com:fcrepo4/fcrepo-build-tools.git
     </developerConnection>
-    <url>https://github.com/futures/fcrepo-build-tools</url>
+    <url>https://github.com/fcrepo4/fcrepo-build-tools</url>
     <tag>HEAD</tag>
   </scm>
 
