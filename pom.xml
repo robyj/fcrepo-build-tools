@@ -7,7 +7,7 @@
   </parent>
   <groupId>org.fcrepo</groupId>
   <artifactId>fcrepo-build-tools</artifactId>
-  <version>1.4-SNAPSHOT</version>
+  <version>4.0.0-beta-02-SNAPSHOT</version>
   <packaging>bundle</packaging>
   <name>fcrepo-build-tools</name>
   <description>A package that contains build tools such as checkstyle rules for org.fcrepo projects</description>
@@ -101,11 +101,11 @@
   </build>
 
   <scm>
-    <connection>scm:git:git://github.com/futures/fcrepo-build-tools.git
+    <connection>scm:git:git://github.com/fcrepo4/fcrepo-build-tools.git
     </connection>
-    <developerConnection>scm:git:git@github.com:futures/fcrepo-build-tools.git
+    <developerConnection>scm:git:git@github.com:fcrepo4/fcrepo-build-tools.git
     </developerConnection>
-    <url>https://github.com/futures/fcrepo-build-tools</url>
+    <url>https://github.com/fcrepo4/fcrepo-build-tools</url>
     <tag>HEAD</tag>
   </scm>
 
@@ -164,6 +164,28 @@
         <role>developer</role>
       </roles>
       <timezone>+8</timezone>
+    </developer>
+    <developer>
+      <id>awoods</id>
+      <name>Andrew Woods</name>
+      <email>awoods @ (domain of organization url)</email>
+      <organization>DuraSpace</organization>
+      <organizationUrl>http://www.duraspace.org/</organizationUrl>
+      <roles>
+        <role>developer</role>
+      </roles>
+      <timezone>-7</timezone>
+    </developer>
+    <developer>
+      <id>ksclarke</id>
+      <name>Kevin Clarke</name>
+      <email>ksclarke @ (domain of organization url)</email>
+      <organization>UC Los Angeles</organization>
+      <organizationUrl>http://library.ucla.edu/</organizationUrl>
+      <roles>
+        <role>developer</role>
+      </roles>
+      <timezone>-5</timezone>
     </developer>
   </developers>
 </project>
