@@ -1,4 +1,4 @@
 fcrepo-build-tools
 ==================
 
-Build tools for fcrepo (e.g. checkstyle rules)
+This project encapsulates checkstyle and license rules and templates for the Fedora codebase. This is not a public-facing project, but is essential to the Maven3 build machinery of Fedora-related projects.
