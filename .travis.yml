@@ -17,8 +17,6 @@ script:
   - test "0" == $([ -f target/zipout/fcrepo-license/LICENSE_HEADER.txt ] && echo "0" || echo "1")
 
 notifications:
-  irc:
-    channels:
-      - irc.freenode.org#duraspace-ff
-    on_failure: always
-    on_success: always
+  irc: "irc.freenode.org#fcrepo"
+  email:
+    - fedora-tech@googlegroups.com
