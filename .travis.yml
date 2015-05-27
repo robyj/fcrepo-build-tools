@@ -3,9 +3,9 @@ language: java
 jdk:
   - oraclejdk8
 
-branches:
-  only:
-    - master
+# branches:
+#  only:
+#    - master
 
 script:
   - xmllint --valid --noout src/main/resources/fcrepo-checkstyle/checkstyle.xml
