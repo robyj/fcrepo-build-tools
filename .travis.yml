@@ -3,9 +3,10 @@ language: java
 jdk:
   - oraclejdk8
 
-# branches:
-#  only:
-#    - master
+branches:
+  only:
+    - master
+    - /^fcrepo-*/
 
 script:
   - xmllint --valid --noout src/main/resources/fcrepo-checkstyle/checkstyle.xml
@@ -15,6 +16,8 @@ script:
   - test "0" == $([ -f target/zipout/fcrepo-checkstyle/checkstyle.xml ] && echo "0" || echo "1")
   - test "0" == $([ -f target/zipout/fcrepo-checkstyle/checkstyle-suppressions.xml ] && echo "0" || echo "1")
   - test "0" == $([ -f target/zipout/fcrepo-license/LICENSE_HEADER.txt ] && echo "0" || echo "1")
+  - mvn javadoc:jar
+  - mvn javadoc:test-aggregate
 
 
 notifications:
